@@ -1,6 +1,7 @@
 <?php
 if(isset($_GET['sessidpass'])) session_id($_GET['sessidpass']);
-if (!$l) require_once $s['script-rel-to-root'].'_php.php';
+$dir_step.='../../../';
+if (!$l) require_once $dir_step.'_php.php';
 /*
 TinyBrowser 1.41 - A TinyMCE file browser (C) 2008  Bryn Jones
 (author website - http://www.lunarvis.com)
@@ -102,9 +103,9 @@ $tinybrowser['view']['image'] = 'thumb'; // Possible values: thumb, detail
 $tinybrowser['pagination'] = 0;
 
 // TinyMCE dialog.css file location, relative to tinybrowser.php (can be set to absolute link)
-$tinybrowser['tinymcecss'] = $s['script-rel-to-root'].'scripts/tinymce/themes/advanced/skins/default/dialog.css';
-$tinybrowser['tinymcepopup']=$s['script-rel-to-root'].'scripts/tinymce/tiny_mce_popup.js';
-$tinybrowser['script']=$s['script-rel-to-root'].'scripts/tinybrowser/';
+$tinybrowser['tinymcecss'] = '../tinymce/themes/advanced/skins/default/dialog.css';
+$tinybrowser['tinymcepopup']='../tinymce/tiny_mce_popup.js';
+$tinybrowser['script']='../tinybrowser/';
 
 // TinyBrowser pop-up window size
 $tinybrowser['window']['width']  = 770;

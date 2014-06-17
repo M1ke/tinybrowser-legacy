@@ -1,5 +1,5 @@
 <?php
-$s['script-rel-to-root']='../../../';
+$dir_step.='../';
 if (!$l) require_once("../config_tinybrowser.php");
 
 header ("Content-type: text/css");

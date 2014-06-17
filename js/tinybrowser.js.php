@@ -1,7 +1,7 @@
 <?php
 $mainpage = (strpos(basename($_SERVER['HTTP_REFERER']),'tinybrowser.php') === 0 ? true : false);
 $mainpage=true;
-$s['script-rel-to-root']='../../../';
+$dir_step.='../';
 require_once('../config_tinybrowser.php');
 
 if($mainpage && !isset($_GET['feid']) && $tinybrowser['integration'] == 'tinymce')

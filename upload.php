@@ -1,5 +1,4 @@
 <?php
-$s['script-rel-to-root']='../../';
 require_once('config_tinybrowser.php');
 // Set language
 if(isset($tinybrowser['language']) && file_exists('langs/'.$tinybrowser['language'].'.php'))

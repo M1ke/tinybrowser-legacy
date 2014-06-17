@@ -1,5 +1,4 @@
 <?php
-$s['script-rel-to-root']='../../';
 require_once("config_tinybrowser.php");
 
 $tbpath = pathinfo($_SERVER['SCRIPT_NAME']);
