@@ -1,0 +1,23 @@
+{
+	"name": "m1ke/tinybrowser",
+	"version": "1.41",
+	"description": "Web based JavaScript HTML WYSIWYG editor file browser.",
+	"license": [
+		"GPL-3"
+	],
+	"keywords": [
+		"editor",
+		"wysiwyg",
+		"tinymce",
+		"richtext",
+		"javascript",
+		"html"
+	],
+	"homepage": "http://www.lunarvis.com",
+	"type": "library",
+	"archive": {
+		"exclude": [
+			"readme.txt"
+		]
+	}
+}

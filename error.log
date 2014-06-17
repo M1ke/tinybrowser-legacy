@@ -1,0 +1,18 @@
+2010-01-10 14:01:06 (GMT)	8 Notice	Undefined index:  tinympcecss	File: tinybrowser.php	Line: 207	
+2010-01-10 14:01:06 (GMT)	8 Notice	Undefined index:  tinympcecss	File: tinybrowser.php	Line: 207	
+2010-01-10 14:01:12 (GMT)	8 Notice	Undefined index:  tinympcecss	File: tinybrowser.php	Line: 207	
+2010-01-10 14:01:12 (GMT)	8 Notice	Undefined index:  tinympcecss	File: tinybrowser.php	Line: 207	
+2010-01-10 14:19:19 (GMT)	8 Notice	Undefined variable: dest_folder	File: upload_file.php	Line: 59	
+2010-01-10 14:19:19 (GMT)	8 Notice	Undefined variable: dest_folder	File: upload_file.php	Line: 61	
+2010-01-10 21:30:32 (GMT)	8 Notice	Undefined index:  obfuscate	File: upload_file.php	Line: 17	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  folder	File: upload_process.php	Line: 18	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  type	File: upload_process.php	Line: 19	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  	File: upload_process.php	Line: 19	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  folder	File: upload_process.php	Line: 19	
+2010-01-10 21:30:47 (GMT)	2 Warning	rename(E:/M1ke/Documents/Websites/eypukcatbus.jpg_,E:/M1ke/Documents/Websites/eypukcatbus.jpg) [<a href='function.rename'>function.rename</a>]: No such file or directory	File: upload_process.php	Line: 51	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  type	File: upload_process.php	Line: 55	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  type	File: upload_process.php	Line: 98	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  	File: upload.php	Line: 59	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined variable: filestr	File: upload.php	Line: 60	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  	File: upload.php	Line: 60	
+2010-01-10 21:30:47 (GMT)	8 Notice	Undefined index:  	File: upload.php	Line: 121	
