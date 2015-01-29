@@ -1,4 +1,14 @@
 <?php
+function return_path_absolute($dir){
+	global $tinybrowser;
+	if ($dir[0]=='/'){
+		return $dir;
+	}
+	else {
+		return $tinybrowser['docroot'].$dir;
+	}
+}
+
 // *************************CREATE FOLDER**********************************
 function createfolder($dir,$perm) {
 is_dir(dirname($dir)) || createfolder(dirname($dir), $perm);
@@ -161,7 +171,7 @@ return $cim1;
 
 // **************************GENERATE FORM OPEN*****************************
 function form_open($name,$class,$url,$parameters){
-?><form name="<?php echo $name; ?>" class="<?php echo $class; ?>" method="post" action="<?php echo $url.$parameters; ?>">
+?><form name="<?php echo $name; ?>" class="<?php echo $class; ?>" method="post" action="<?php echo TINYBROWSER.$url.$parameters; ?>">
 <?php
 }
 

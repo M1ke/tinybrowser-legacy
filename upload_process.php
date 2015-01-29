@@ -2,6 +2,10 @@
 require_once('config_tinybrowser.php');
 require_once('fns_tinybrowser.php');
 
+function msg($n){
+	shell_exec('echo "'.$n.'" >> /tmp/tinybrowser-msg');
+}
+
 // delay script if set
 if($tinybrowser['delayprocess']>0) sleep($tinybrowser['delayprocess']);
 
@@ -12,10 +16,8 @@ $bad = 0;
 $dup = 0;
 $total = (isset($_GET['filetotal']) ? $_GET['filetotal'] : 0);
 
-
 // Assign get variables
-$folder = $tinybrowser['docroot'].urldecode($_GET['folder']);
-echo $folder;
+$folder = urldecode($_GET['folder']);
 $foldernow = urlencode(str_replace($tinybrowser['path'][$_GET['type']],'',urldecode($_GET['folder'])));
 $passfeid = (isset($_GET['feid']) ? '&feid='.$_GET['feid'] : '');
 
@@ -93,8 +95,12 @@ if ($handle = opendir($folder))
 }
 $bad = $total-($good+$dup);
 // Check for problem during upload
-if($total>0 && $bad==$total) Header('Location: ./upload.php?type='.$_GET['type'].$passfeid.'&permerror=1&total='.$total);
-else Header('Location: ./upload.php?type='.$_GET['type'].$passfeid.'&folder='.$foldernow.'&badfiles='.$bad.'&goodfiles='.$good.'&dupfiles='.$dup);
+if($total>0 && $bad==$total) {
+	Header('Location: ./upload.php?type='.$_GET['type'].$passfeid.'&permerror=1&total='.$total);
+}
+else {
+	Header('Location: ./upload.php?type='.$_GET['type'].$passfeid.'&folder='.'&badfiles='.$bad.'&goodfiles='.$good.'&dupfiles='.$dup);
+}
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

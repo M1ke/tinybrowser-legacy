@@ -220,18 +220,18 @@ form_open('foldertab',false,'tinybrowser.php','?type='.$typenow.$passviewtype.$p
 ?>
 <div class="tabs">
 <ul>
-<li id="browse_tab" class="currentmod"><span><a href="tinybrowser.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_BROWSE; ?></a></span></li><?php
+<li id="browse_tab" class="currentmod"><span><a href="<?= TINYBROWSER ?>tinybrowser.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_BROWSE; ?></a></span></li><?php
 if($tinybrowser['allowupload']) 
 	{
-	?><li id="upload_tab"><span><a href="upload.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_UPLOAD; ?></a></span></li><?php
+	?><li id="upload_tab"><span><a href="<?= TINYBROWSER ?>upload.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_UPLOAD; ?></a></span></li><?php
 	}
 if($tinybrowser['allowedit'] || $tinybrowser['allowdelete'])
 	{
-	?><li id="edit_tab"><span><a href="edit.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_EDIT; ?></a></span></li><?php
+	?><li id="edit_tab"><span><a href="<?= TINYBROWSER ?>edit.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_EDIT; ?></a></span></li><?php
 	}
 if($tinybrowser['allowfolders'])
 	{
-	?><li id="folders_tab"><span><a href="folders.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_FOLDERS; ?></a></span></li><?php
+	?><li id="folders_tab"><span><a href="<?= TINYBROWSER ?>folders.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_FOLDERS; ?></a></span></li><?php
 	}
 // Display folder select, if multiple exist
 if(count($browsedirs)>1)

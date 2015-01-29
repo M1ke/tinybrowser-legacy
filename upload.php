@@ -36,7 +36,7 @@ $passfeid = (isset($_GET['feid']) && $_GET['feid']!='' ? '&feid='.$_GET['feid'] 
 $passupfeid = (isset($_GET['feid']) && $_GET['feid']!='' ? $_GET['feid'] : '');
 
 // Assign upload path
-$uploadpath = urlencode($tinybrowser['path'][$typenow].$foldernow);
+$uploadpath = urlencode(CONTENT.$tinybrowser['path'][$typenow].$foldernow);
 
 // Assign directory structure to array
 $uploaddirs=array();
@@ -141,17 +141,17 @@ form_open('foldertab',false,'upload.php','?type='.$typenow.$passfeid);
 ?>
 <div class="tabs">
 <ul>
-<li id="browse_tab"><span><a href="tinybrowser.php?type=<?php echo $typenow.$passfolder.$passfeid ; ?>"><?php echo TB_BROWSE; ?></a></span></li>
-<li id="upload_tab" class="current"><span><a href="upload.php?type=<?php echo $typenow.$passfolder.$passfeid ; ?>"><?php echo TB_UPLOAD; ?></a></span></li>
+<li id="browse_tab"><span><a href="<?= TINYBROWSER ?>tinybrowser.php?type=<?php echo $typenow.$passfolder.$passfeid ; ?>"><?php echo TB_BROWSE; ?></a></span></li>
+<li id="upload_tab" class="current"><span><a href="<?= TINYBROWSER ?>upload.php?type=<?php echo $typenow.$passfolder.$passfeid ; ?>"><?php echo TB_UPLOAD; ?></a></span></li>
 <?php
 if($tinybrowser['allowedit'] || $tinybrowser['allowdelete'])
 	{
-	?><li id="edit_tab"><span><a href="edit.php?type=<?php echo $typenow.$passfolder.$passfeid ; ?>"><?php echo TB_EDIT; ?></a></span></li>
+	?><li id="edit_tab"><span><a href="<?= TINYBROWSER ?>edit.php?type=<?php echo $typenow.$passfolder.$passfeid ; ?>"><?php echo TB_EDIT; ?></a></span></li>
 	<?php 
 	}
 if($tinybrowser['allowfolders'])
 	{
-	?><li id="folders_tab"><span><a href="folders.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_FOLDERS; ?></a></span></li><?php
+	?><li id="folders_tab"><span><a href="<?= TINYBROWSER ?>folders.php?type=<?php echo $typenow.$passfolder.$passfeid; ?>"><?php echo TB_FOLDERS; ?></a></span></li><?php
 	}
 // Display folder select, if multiple exist
 if(count($uploaddirs)>1)

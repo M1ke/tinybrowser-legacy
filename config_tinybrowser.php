@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['sessidpass'])) session_id($_GET['sessidpass']);
-$dir_step.='../../../';
-if (!$l) require_once $dir_step.'_php.php';
+// $dir_step.='../../../';
+// if (!$l) require_once $dir_step.'_php.php';
 /*
 TinyBrowser 1.41 - A TinyMCE file browser (C) 2008  Bryn Jones
 (author website - http://www.lunarvis.com)
@@ -47,20 +47,20 @@ $tinybrowser['integration'] = 'tinymce'; // Possible values: 'tinymce', 'fckedit
 //     $s['root']=get_root();
 // }
 // $tinybrowser['docroot'] = $s['root'];
-$tinybrowser['docroot'] = DIR;
+$tinybrowser['docroot'] = CONTENT;
 
 // Folder permissions for Unix servers only
 $tinybrowser['unixpermissions'] = 0777;
 
 // File upload paths (set to absolute by default)
-$tinybrowser['path']['image'] = 'content/images/'; // Image files location - also creates a '_thumbs' subdirectory within this path to hold the image thumbnails
+$tinybrowser['path']['image'] = 'content/image/'; // Image files location - also creates a '_thumbs' subdirectory within this path to hold the image thumbnails
 $tinybrowser['path']['media'] = 'content/media/'; // Media files location
-$tinybrowser['path']['file']  = 'content/files/'; // Other files location
+$tinybrowser['path']['file']  = 'content/file/'; // Other files location
 
 // File link paths - these are the paths that get passed back to TinyMCE or your application (set to equal the upload path by default)
-$tinybrowser['link']['image'] = $s['site-abs'].$tinybrowser['path']['image']; // Image links
-$tinybrowser['link']['media'] = $s['site-abs'].$tinybrowser['path']['media']; // Media links
-$tinybrowser['link']['file']  = $s['site-abs'].$tinybrowser['path']['file']; // Other file links
+$tinybrowser['link']['image'] = CONTENT_URL.$tinybrowser['path']['image']; // Image links
+$tinybrowser['link']['media'] = CONTENT_URL.$tinybrowser['path']['media']; // Media links
+$tinybrowser['link']['file']  = CONTENT_URL.$tinybrowser['path']['file']; // Other file links
 
 // File upload size limit (0 is unlimited)
 $tinybrowser['maxsize']['image'] = 0; // Image file maximum size
@@ -103,9 +103,9 @@ $tinybrowser['view']['image'] = 'thumb'; // Possible values: thumb, detail
 $tinybrowser['pagination'] = 0;
 
 // TinyMCE dialog.css file location, relative to tinybrowser.php (can be set to absolute link)
-$tinybrowser['tinymcecss'] = '../tinymce/themes/advanced/skins/default/dialog.css';
-$tinybrowser['tinymcepopup']='../tinymce/tiny_mce_popup.js';
-$tinybrowser['script']='../tinybrowser/';
+$tinybrowser['tinymcecss'] = TINYMCE_VENDOR_OWNER.'tinymce/themes/advanced/skins/default/dialog.css';
+$tinybrowser['tinymcepopup']=TINYMCE_VENDOR_OWNER.'tinymce/tiny_mce_popup.js';
+$tinybrowser['script']=TINYMCE_VENDOR_OWNER.'tinybrowser/';
 
 // TinyBrowser pop-up window size
 $tinybrowser['window']['width']  = 770;

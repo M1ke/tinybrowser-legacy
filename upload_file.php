@@ -2,12 +2,18 @@
 require_once('config_tinybrowser.php');
 require_once('fns_tinybrowser.php');
 
-// Check session, if it exists
-if (!admin())
-{
-	echo 'Error!';
-	exit;
+function msg($n){
+	shell_exec('echo "'.$n.'" >> /tmp/tinybrowser-msg');
 }
+
+// Check session, if it exists
+// if (!admin())
+// {
+// 	msg('ad er');
+// 	echo 'Error!';
+// 	exit;
+// }
+// 	msg('ad');
 // Check hash is correct (workaround for Flash session bug, to stop external form posting)
 if($_GET['obfuscate'] != md5($_SERVER['DOCUMENT_ROOT'].$tinybrowser['obfuscate']))
 {
@@ -45,9 +51,9 @@ if ($_FILES['Filedata']['tmp_name'] && $_FILES['Filedata']['name'])
 	$source_file = $_FILES['Filedata']['tmp_name'];
 	$file_name = stripslashes($_FILES['Filedata']['name']);
 	if($tinybrowser['cleanfilename']) $file_name = clean_filename($file_name);
-	if(is_dir($tinybrowser['docroot'].$dest_folder))
+	if(is_dir($dest_folder))
 	{
-		$success = copy($source_file,$tinybrowser['docroot'].$dest_folder.'/'.$file_name.'_');
+		$success = copy($source_file,$dest_folder.'/'.$file_name.'_');
 	}
 	if($success)
 	{
